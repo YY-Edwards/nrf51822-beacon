@@ -1,0 +1,18 @@
+--cpu Cortex-M0
+".\_build\arm_startup_nrf51.o"
+".\_build\system_nrf51.o"
+".\_build\main.o"
+".\_build\client_handling.o"
+".\_build\delay.o"
+".\_build\led.o"
+".\_build\time.o"
+".\_build\ble_srv_common.o"
+".\_build\ble_debug_assert_handler.o"
+".\_build\softdevice_handler.o"
+".\_build\conn_mngr.o"
+".\_build\debug.o"
+".\_build\simple_uart.o"
+--library_type=microlib --strict --scatter ".\_build\ble_app_multilink_central.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\_build\ble_app_multilink_central.map" -o .\_build\ble_app_multilink_central.axf

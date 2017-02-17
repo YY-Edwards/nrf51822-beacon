@@ -1,0 +1,58 @@
+;#<FEEDBACK># ARM Linker, 5040049: Last Updated: Tue Feb 14 13:10:32 2017
+;VERSION 0.2
+;FILE arm_startup_nrf51.o
+;FILE ble_debug_assert_handler.o
+__asm___26_ble_debug_assert_handler_c_be844777____REV16 <= USED 0
+__asm___26_ble_debug_assert_handler_c_be844777____REVSH <= USED 0
+ble_debug_assert_handler <= USED 0
+;FILE ble_srv_common.o
+__asm___16_ble_srv_common_c_d5082fca____REV16 <= USED 0
+__asm___16_ble_srv_common_c_d5082fca____REVSH <= USED 0
+ble_srv_ascii_to_utf8 <= USED 0
+ble_srv_report_ref_encode <= USED 0
+;FILE client_handling.o
+__asm___17_client_handling_c_4e306ef7____REV16 <= USED 0
+__asm___17_client_handling_c_4e306ef7____REVSH <= USED 0
+client_count <= USED 0
+;FILE conn_mngr.o
+__asm___11_conn_mngr_c_0c9b280a____REV16 <= USED 0
+__asm___11_conn_mngr_c_0c9b280a____REVSH <= USED 0
+conn_mngr_disconnect <= USED 0
+;FILE debug.o
+__asm___7_debug_c_496e0c4d____REV16 <= USED 0
+__asm___7_debug_c_496e0c4d____REVSH <= USED 0
+;FILE delay.o
+__asm___7_delay_c_delay_ms____REV16 <= USED 0
+__asm___7_delay_c_delay_ms____REVSH <= USED 0
+delay_ms <= USED 0
+delay_us <= USED 0
+;FILE led.o
+LED1_Close <= USED 0
+LED1_Open <= USED 0
+LED2_Close <= USED 0
+LED2_Open <= USED 0
+LED2_Toggle <= USED 0
+__asm___5_led_c_led_init____REV16 <= USED 0
+__asm___5_led_c_led_init____REVSH <= USED 0
+;FILE main.o
+__asm___6_main_c_tc_tick____REV16 <= USED 0
+__asm___6_main_c_tc_tick____REVSH <= USED 0
+;FILE simple_uart.o
+__asm___13_simple_uart_c_5dda6715____REV16 <= USED 0
+__asm___13_simple_uart_c_5dda6715____REVSH <= USED 0
+__asm___13_simple_uart_c_5dda6715__nrf_delay_us <= USED 0
+simple_uart_get <= USED 0
+simple_uart_get_with_timeout <= USED 0
+simple_uart_putstring <= USED 0
+;FILE softdevice_handler.o
+__asm___20_softdevice_handler_c_370b0038____REV16 <= USED 0
+__asm___20_softdevice_handler_c_370b0038____REVSH <= USED 0
+softdevice_handler_sd_disable <= USED 0
+softdevice_sys_evt_handler_set <= USED 0
+;FILE system_nrf51.o
+SystemCoreClockUpdate <= USED 0
+__asm___14_system_nrf51_c_5d646a67____REV16 <= USED 0
+__asm___14_system_nrf51_c_5d646a67____REVSH <= USED 0
+;FILE time.o
+__asm___6_time_c_ecdd1b39____REV16 <= USED 0
+__asm___6_time_c_ecdd1b39____REVSH <= USED 0

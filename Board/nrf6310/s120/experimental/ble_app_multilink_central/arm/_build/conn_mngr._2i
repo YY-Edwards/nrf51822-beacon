@@ -1,0 +1,6 @@
+-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99
+-I "D:\Program Files (x86)\keil\ARM\RV31\INC"
+-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"
+-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"
+-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT
+-o .\_build\conn_mngr.o --omf_browse .\_build\conn_mngr.crf --depend .\_build\conn_mngr.d --feedback ".\_build\ble_app_multilink_central.fed" "..\..\common\conn_mngr.c"
