@@ -37,6 +37,7 @@
 #include "app_util.h"
 #include "debug.h"
 #include "math.h"//数学函数头文件
+#include "uart.h"
 
 
 /**
@@ -148,7 +149,7 @@
         } while(0)
 
         
-#define CNXN_MNGR_LOG debug_log
+//#define CNXN_MNGR_LOG //debug_log
         
 /**
  * @brief Defines entry for each application instance table.
@@ -351,7 +352,7 @@ uint32_t adv_report_parse(uint8_t type, data_t * p_advdata, data_t * p_typedata)
 #endif
 
 #if 1
-uint32_t adv_report_parse(data_t * p_advdata, data_t * p_typedata)
+uint32_t adv_report_parse(uint8_t *ble_addr, data_t * p_advdata, data_t * p_typedata)
 #endif
 {
     uint32_t index = 0;
@@ -375,44 +376,44 @@ uint32_t adv_report_parse(data_t * p_advdata, data_t * p_typedata)
 			{
 				case BLE_GAP_AD_TYPE_FLAGS://0x01
 					
-					debug_log("Flags: ");
+					//debug_log("Flags: ");
 				
-					if((*(p_typedata->p_data) & BIT_0) == BIT_0)debug_log("Limited Discoverable. ");
-				  if((*(p_typedata->p_data) & BIT_1) == BIT_1)debug_log("General Discoverable. ");
-					if((*(p_typedata->p_data) & BIT_2) == BIT_2)debug_log("BR/EDR Not Supported. ");
-					if((*(p_typedata->p_data) & BIT_3) == BIT_3)debug_log("LE and BR/EDR Capable(Controller). ");
-					if((*(p_typedata->p_data) & BIT_4) == BIT_4)debug_log("LE and BR/EDR Capable(Host). ");
+					if((*(p_typedata->p_data) & BIT_0) == BIT_0)//debug_log("Limited Discoverable. ");
+				  if((*(p_typedata->p_data) & BIT_1) == BIT_1)//debug_log("General Discoverable. ");
+					if((*(p_typedata->p_data) & BIT_2) == BIT_2)//debug_log("BR/EDR Not Supported. ");
+					if((*(p_typedata->p_data) & BIT_3) == BIT_3)//debug_log("LE and BR/EDR Capable(Controller). ");
+					if((*(p_typedata->p_data) & BIT_4) == BIT_4)//debug_log("LE and BR/EDR Capable(Host). ");
 				 
-				  debug_log("\r\nBeacon data:\r\n");
+				  //debug_log("\r\nBeacon data:\r\n");
 				
 						break;
 					
 				case BLE_GAP_AD_TYPE_16BIT_SERVICE_UUID_COMPLETE://0x03,注意变换value的大小端
 								
-						debug_log("Complete list of 16-bit Service UUIDs: 0X%x\r\n",   ((uint16_t)*((p_typedata->p_data)+1)<<8) + (uint16_t)*(p_typedata->p_data));
+						//debug_log("Complete list of 16-bit Service UUIDs: 0X%x\r\n",   ((uint16_t)*((p_typedata->p_data)+1)<<8) + (uint16_t)*(p_typedata->p_data));
 				
 						break;
 				
 				case BLE_GAP_AD_TYPE_COMPLETE_LOCAL_NAME://0x09
 					
-						debug_log("Complete Local Name: %s\r\n",  (char *)(p_typedata->p_data));
+						//debug_log("Complete Local Name: %s\r\n",  (char *)(p_typedata->p_data));
 				
 						break;
 				
 				
 				case BLE_GAP_AD_TYPE_SERVICE_DATA: //0x16
 						
-						debug_log("Service Data:\r\n");
-						debug_log("UUID:0x%X\r\n",  ((*((p_typedata->p_data)+1))<<8) + (*(p_typedata->p_data)));	
+						//debug_log("Service Data:\r\n");
+						//debug_log("UUID:0x%X\r\n",  ((*((p_typedata->p_data)+1))<<8) + (*(p_typedata->p_data)));	
 						
-						uint8_t i;
-									
-						for(i= 0; i<(p_typedata->data_len)-2; i++)
-							{
-									   
-									debug_log("Data: : 0x%X", *(++(p_typedata->p_data)));
-										 
-							}
+//						uint8_t i;
+//									
+//						for(i= 0; i<(p_typedata->data_len)-2; i++)
+//							{
+//									   
+//									//debug_log("Data: : 0x%X", *(++(p_typedata->p_data)));
+//										 
+//							}
 							
 					break;
 				
@@ -430,40 +431,45 @@ uint32_t adv_report_parse(data_t * p_advdata, data_t * p_typedata)
 								uint32_t u_index;
                 uint16_t extracted_uuid;
 								
-								debug_log("Company:0x%X\r\n",  ((uint16_t)beacon_buff->company[1]<<8) + (uint16_t)beacon_buff->company[0]);	
+								//debug_log("Company:0x%X\r\n",  ((uint16_t)beacon_buff->company[1]<<8) + (uint16_t)beacon_buff->company[0]);	
 							
-								debug_log("Type: Beacon\r\n");
+								//debug_log("Type: Beacon\r\n");
 								
-								debug_log("Length of data: %d bytes\r\n", beacon_buff->dlen);
+								//debug_log("Length of data: %x bytes\r\n", beacon_buff->dlen);
 								
-								debug_log("UUID: \r\n");
+								//debug_log("UUID: \r\n");
 								
 								 // UUIDs found
                  for(u_index = 0; u_index < (16/UUID16_SIZE); u_index++)
                   {                            
                       UUID16_EXTRACT(&extracted_uuid,&beacon_buff->beacon_uuid[u_index * UUID16_SIZE]);
                             
-                      debug_log("\t[%d]: %x\r\n",u_index,extracted_uuid);
+                      //debug_log("\t[%d]: %x\r\n",u_index,extracted_uuid);
                                                      
                   }
 								
-								debug_log("Major: %d\r\n", ((beacon_buff->major_value[0])<<8)+beacon_buff->major_value[1]);
+								//debug_log("Major: %x\r\n", ((beacon_buff->major_value[0])<<8)+beacon_buff->major_value[1]);
 									
-								debug_log("Minor: %d\r\n", ((beacon_buff->minor_value[0])<<8)+beacon_buff->minor_value[1]);
+								//debug_log("Minor: %x\r\n", ((beacon_buff->minor_value[0])<<8)+beacon_buff->minor_value[1]);
 									
-								debug_log("RSSI at 1m: %d dBm\r\n",(beacon_buff->measured_rssi-256));
+								//debug_log("RSSI at 1m: %d dBm\r\n",(beacon_buff->measured_rssi-256));
+									
+								
+								memcpy(beacon_temp + 25,  ble_addr, 6);//将beacon_ble_addr数据添加到beacon_temp数据包末尾	
+								//debug_log("addrr okay!!! \r\n");
+								uart_data_handler(beacon_temp, 25+6);
 											
 							}
 							else
 							{
-								debug_log("Unknown data packet\r\n");
+								//debug_log("Unknown data packet\r\n");
 							}
 					
 						break;
 							
 			  default:
 						
-				  debug_log("Unrecognized Packet type\r\n");
+				  //debug_log("Unrecognized Packet type\r\n");
 				
 					//return NRF_ERROR_NOT_FOUND;
 					
@@ -542,7 +548,7 @@ static uint32_t scan_start(void)
     }
     else
     {
-        CNXN_MNGR_LOG("[CM]: Scan start failed, reason %d\r\n",retval);
+//        CNXN_MNGR_LOG("[CM]: Scan start failed, reason %d\r\n",retval);
     }
     
     return retval;
@@ -563,7 +569,7 @@ static uint32_t scan_stop(void)
     }
     else
     {
-        CNXN_MNGR_LOG("[CM]: Scan start failed, reason %d\r\n",retval);
+//        CNXN_MNGR_LOG("[CM]: Scan start failed, reason %d\r\n",retval);
     }
     
     return retval;
@@ -683,7 +689,7 @@ uint32_t conn_mngr_connect(const conn_mngr_scan_param_t * p_param)
         
         if(retval != NRF_SUCCESS)
         {
-            CNXN_MNGR_LOG("[CM]: Connection Request Failed, reason %d\r\n", retval);
+//            CNXN_MNGR_LOG("[CM]: Connection Request Failed, reason %d\r\n", retval);
             // Connection request failed, free connection instance.
             cnxn_inst_free(&index);
         }
@@ -718,7 +724,7 @@ uint32_t conn_mngr_start(void)
     VERIFY_MODULE_INITIALIZED();
     VERIFY_APP_REGISTERED();
 	
-    debug_log(" Call the function scan_start()\r\n");
+    //debug_log(" Call the function scan_start()\r\n");
 	
     return scan_start();
 }
@@ -898,8 +904,8 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
                                     &index);            
             if (retval == NRF_SUCCESS)
             {
-                CNXN_MNGR_LOG(
-                "[CM]: Disconnect Reaon 0x%04X\r\n",p_ble_evt->evt.gap_evt.params.disconnected.reason);
+//                CNXN_MNGR_LOG(
+  //              "[CM]: Disconnect Reaon 0x%04X\r\n",p_ble_evt->evt.gap_evt.params.disconnected.reason);
                 m_cnxn_inst_table[index].state = DISCONNECTING;                
                 notify_app = true;
                 handle.conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
@@ -912,14 +918,14 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
             else
             {
                 // Disconnection unrelated to application managed connection.
-                CNXN_MNGR_LOG(
-                "[CM]: Failed to find matching connection instance, dropping event.\r\n");
+//                CNXN_MNGR_LOG(
+  //              "[CM]: Failed to find matching connection instance, dropping event.\r\n");
             }
             break;
         case BLE_GAP_EVT_TIMEOUT:
             if(p_ble_evt->evt.gap_evt.params.timeout.src == BLE_GAP_TIMEOUT_SRC_SCAN)
             {
-                CNXN_MNGR_LOG("[CM]: Scan Timedout.\r\n");
+//                CNXN_MNGR_LOG("[CM]: Scan Timedout.\r\n");
                 if ((m_app_table[0].state & APP_SCANNING) == APP_SCANNING)
                 {
                     m_app_table[0].state &= (~APP_SCANNING);
@@ -934,7 +940,7 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
             }
             else if (p_ble_evt->evt.gap_evt.params.timeout.src == BLE_GAP_TIMEOUT_SRC_CONN)
             {
-                CNXN_MNGR_LOG("[CM]: Connection Request Timedout.\r\n");
+//                CNXN_MNGR_LOG("[CM]: Connection Request Timedout.\r\n");
                 // Only one connection request is pending at a time and connection handle is not
                 // known to the device yet.
                 retval = cnxn_inst_find(BLE_CONN_HANDLE_INVALID, CONNECTING, &index);
@@ -957,23 +963,23 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
         {
             int8_t expected_rssi = CONN_MNGR_TARGET_RSSI;  
 					
-					  debug_log("NOTE....\r\n");
-						debug_log("Go to BLE_GAP_EVT_ADV_REPORT....\r\n");
+					  //debug_log("NOTE....\r\n");
+						//debug_log("Go to BLE_GAP_EVT_ADV_REPORT....\r\n");
 					   
-						debug_log(".....主机接收数据如下里所示.....\r\n");//打印广播数据
+						//debug_log(".....主机接收数据如下里所示.....\r\n");//打印广播数据
 					  
 					
-						debug_log("the m_app_table's state is : %d\r\n", m_app_table[0].state);//0x03
+						//debug_log("the m_app_table's state is : %d\r\n", m_app_table[0].state);//0x03
 					
-						debug_log("the adv_report type is : %d\r\n", p_ble_evt->evt.gap_evt.params.adv_report.type);//0x00
+						//debug_log("the adv_report type is : %d\r\n", p_ble_evt->evt.gap_evt.params.adv_report.type);//0x00
 					
-						debug_log("the adv_report rssi is : %d\r\n", p_ble_evt->evt.gap_evt.params.adv_report.rssi);//大于-60范围内都有效
+						//debug_log("the adv_report rssi is : %d\r\n", p_ble_evt->evt.gap_evt.params.adv_report.rssi);//大于-60范围内都有效
 					
-						debug_log("the adv_report dlen is : %d\r\n", p_ble_evt->evt.gap_evt.params.adv_report.dlen);//数据长度
+						//debug_log("the adv_report dlen is : %d\r\n", p_ble_evt->evt.gap_evt.params.adv_report.dlen);//数据长度
 					
-						debug_log("the adv_report scan_rsp is : %d\r\n", p_ble_evt->evt.gap_evt.params.adv_report.scan_rsp);//扫描响应值
+						//debug_log("the adv_report scan_rsp is : %d\r\n", p_ble_evt->evt.gap_evt.params.adv_report.scan_rsp);//扫描响应值
 					
-						debug_log("the adv_report peer_addr's type is : %X\r\n", p_ble_evt->evt.gap_evt.params.adv_report.peer_addr.addr_type);//蓝牙地址类型
+						//debug_log("the adv_report peer_addr's type is : %X\r\n", p_ble_evt->evt.gap_evt.params.adv_report.peer_addr.addr_type);//蓝牙地址类型
 					
 						uint8_t j;
 						double accuracy;
@@ -981,13 +987,14 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
 						for(j= 0; j<BLE_GAP_ADDR_LEN; j++)
 							{
 		
-								debug_log("the adv_report peer_addr's address is : %X\r\n", (p_ble_evt->evt.gap_evt.params.adv_report.peer_addr.addr[j]));//蓝牙地址数据
-					
+								//debug_log("the adv_report peer_addr's address is : %X\r\n", (p_ble_evt->evt.gap_evt.params.adv_report.peer_addr.addr[j]));//蓝牙地址数据
+								
+								
 							}
 						
 							accuracy=calculateAccuracy(-84, p_ble_evt->evt.gap_evt.params.adv_report.rssi);//txPower是根据ibeacon信标的数据0xAC=172.
 					                                                                                 //2的补码256-172=-84dBm
-							debug_log("NOTE: calculating ibeacon distancing ....%f meters\r\n",accuracy);
+							//debug_log("NOTE: calculating ibeacon distancing ....%f meters\r\n",accuracy);
 					
 					
        
@@ -1001,13 +1008,17 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
                 (expected_rssi <= p_ble_evt->evt.gap_evt.params.adv_report.rssi))
             {                
                 
-							  debug_log("success....\r\n");      
-							 // debug_log("Beacon data:\r\n");  							
+							  //debug_log("success....\r\n");      
+							 // //debug_log("Beacon data:\r\n");  							
                 bool initiate_connection = false;                
                 
                 // 认证方式	
 								data_t adv_data;
                 data_t type_data;   
+							
+								uint8_t beacon_ble_addr[6];//低位在前，高位在后
+								memset(beacon_ble_addr, 0x00, 6);//清零
+								memcpy(beacon_ble_addr, p_ble_evt->evt.gap_evt.params.adv_report.peer_addr.addr, 6);		
 							//initiate_connection = true;//调试连接状态下，整个连接过程所需要花费的时间
 
 #if 1							
@@ -1016,11 +1027,13 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
 								adv_data.p_data = p_ble_evt->evt.gap_evt.params.adv_report.data;
                 adv_data.data_len = p_ble_evt->evt.gap_evt.params.adv_report.dlen;
 								
-								retval = adv_report_parse(&adv_data,&type_data);//做些修正
+								retval = adv_report_parse(beacon_ble_addr, &adv_data,&type_data);//做些修正
 							
 							   if (retval != NRF_SUCCESS)
                     {
-                       retval = adv_report_parse(&adv_data,&type_data);
+                       //retval = adv_report_parse(&adv_data,&type_data);
+											retval = adv_report_parse(beacon_ble_addr, &adv_data,&type_data);
+											
                     }
                     
                   if (retval == NRF_SUCCESS)
@@ -1058,7 +1071,7 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
                     // In case more or complete 16 bit UUID search succeeds, look for target UUID in the data.
                     if (retval == NRF_SUCCESS)
                     {
-                        CNXN_MNGR_LOG("[CM]: Adv Report contains 16bit UUID, RSSI %d\r\n",
+//                        CNXN_MNGR_LOG("[CM]: Adv Report contains 16bit UUID, RSSI %d\r\n",
                         p_ble_evt->evt.gap_evt.params.adv_report.rssi);
                         uint32_t u_index;
                         uint16_t extracted_uuid;
@@ -1068,7 +1081,7 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
                         {                            
                             UUID16_EXTRACT(&extracted_uuid,&type_data.p_data[u_index * UUID16_SIZE]);
                             
-                            debug_log("\t[CM]: %x\r\n",extracted_uuid);
+                            //debug_log("\t[CM]: %x\r\n",extracted_uuid);
                             
                             if(extracted_uuid == CONN_MNGR_TARGET_UUID)
                             {
@@ -1126,7 +1139,7 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
                 if (initiate_connection == true)
                 {
 #if(AUTO_CONNECT_ON_MATCH == 1)                    
-                    CNXN_MNGR_LOG("[CM]: Initiating connection\r\n");
+//                    CNXN_MNGR_LOG("[CM]: Initiating connection\r\n");
                     // Allocate connection instance for new connection.
                     retval = cnxn_inst_alloc(&index);                    
                     if (retval == NRF_SUCCESS)
@@ -1140,13 +1153,13 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
                         
                         if (retval != NRF_SUCCESS)
                         {
-                            CNXN_MNGR_LOG("[CM]: Connection Request Failed, reason %d\r\n", retval);
+//                            CNXN_MNGR_LOG("[CM]: Connection Request Failed, reason %d\r\n", retval);
                             // Connection request failed, free connection instance.
                             cnxn_inst_free(&index);
                         }
                         else
                         {
-                            CNXN_MNGR_LOG("[CM]: Connection Request Success, reason %d\r\n", retval);
+//                            CNXN_MNGR_LOG("[CM]: Connection Request Success, reason %d\r\n", retval);
 														// Set global application state to ensure another connection is not
                             // requested before this request concludes.
                             m_app_table[0].state |= APP_CONNECTING;
@@ -1175,14 +1188,14 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
         }
         break;
         case BLE_GAP_EVT_CONN_PARAM_UPDATE_REQUEST:
-            CNXN_MNGR_LOG("[CM]: Connection Parameter Update request received, accepting!\r\n");
+//            CNXN_MNGR_LOG("[CM]: Connection Parameter Update request received, accepting!\r\n");
             retval = sd_ble_gap_conn_param_update(p_ble_evt->evt.gap_evt.conn_handle,
                                                    &p_ble_evt->evt.gap_evt.params.\
                                                    conn_param_update.conn_params);
             if(retval != NRF_SUCCESS)
             {
-                CNXN_MNGR_LOG(
-                "[CM]: Connection parameter update request failed, reason %d\r\n",retval);
+//                CNXN_MNGR_LOG(
+   //             "[CM]: Connection parameter update request failed, reason %d\r\n",retval);
             }
             break;
         default:
@@ -1211,8 +1224,8 @@ void conn_mngr_ble_evt_handler(ble_evt_t * p_ble_evt)
                 retval = scan_start();
                 if (retval != NRF_SUCCESS)
                 {
-                     CNXN_MNGR_LOG(
-                     "[CM]: Scan start failed, reason %d\r\n", retval);
+//                     CNXN_MNGR_LOG(
+ //                    "[CM]: Scan start failed, reason %d\r\n", retval);
                 }
             }                        
         }

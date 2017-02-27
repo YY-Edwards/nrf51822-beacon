@@ -138,7 +138,7 @@ void intern_softdevice_events_execute(void)
             else
             {
                 // Call application's BLE stack event handler.»Øµ÷º¯Êý
-								debug_log("Call application's BLE stack event handler...\r\n");
+								//debug_log("Call application's BLE stack event handler...\r\n");
 							
                 m_ble_evt_handler((ble_evt_t *)m_evt_buffer);
             }

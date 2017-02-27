@@ -51,7 +51,7 @@
 #define CONNECTED_LED_PIN_NO            LED_1       /**< Is on when device has connected. */
 #define ASSERT_LED_PIN_NO               LED_7       /**< Is on when application has asserted. */
 
-#define APPL_LOG                        debug_log   /**< Debug logger macro that will be used in this file to do logging of debug information over UART. */
+#define APPL_LOG                        //debug_log   /**< Debug logger macro that will be used in this file to do logging of debug information over UART. */
 
 
 
@@ -69,7 +69,7 @@ volatile  uint32_t tc_tick = 0;
  */
 void app_error_handler(uint32_t error_code, uint32_t line_num, const uint8_t * p_file_name)
 {
-    APPL_LOG("[APPL]: ASSERT: %s, %d, error %d\r\n", p_file_name, line_num, error_code);
+    //APPL_LOG("[APPL]: ASSERT: %s, %d, error %d\r\n", p_file_name, line_num, error_code);
     nrf_gpio_pin_set(ASSERT_LED_PIN_NO);
 
     // This call can be used for debug purposes during development of an application.
@@ -126,10 +126,10 @@ void connection_manager_event_handler(conn_mngr_handle_t *    p_handle,
             ble_gap_addr_t * peer_addr;            
             peer_addr = (ble_gap_addr_t *)p_event->p_event_param;
 #endif // ENABLE_DEBUG_LOG_SUPPORT
-            APPL_LOG("[APPL]:[%02X %02X %02X %02X %02X %02X]: Connection Established\r\n",
-                            peer_addr->addr[0], peer_addr->addr[1], peer_addr->addr[2],
-                            peer_addr->addr[3], peer_addr->addr[4], peer_addr->addr[5]);
-            APPL_LOG("\r\n");
+            //APPL_LOG("[APPL]:[%02X %02X %02X %02X %02X %02X]: Connection Established\r\n",
+//                            peer_addr->addr[0], peer_addr->addr[1], peer_addr->addr[2],
+//                            peer_addr->addr[3], peer_addr->addr[4], peer_addr->addr[5]);
+           // APPL_LOG("\r\n");
 
             err_code = client_create(p_handle);
             APP_ERROR_CHECK(err_code);
@@ -137,7 +137,7 @@ void connection_manager_event_handler(conn_mngr_handle_t *    p_handle,
         }
         
         case CONN_MNGR_DISCONNECT_IND:
-            APPL_LOG("[APPL]: Disconnected\r\n");
+           // APPL_LOG("[APPL]: Disconnected\r\n");
 
             err_code = client_destroy(p_handle);
             APP_ERROR_CHECK(err_code);
@@ -159,7 +159,7 @@ void connection_manager_event_handler(conn_mngr_handle_t *    p_handle,
 static void ble_evt_dispatch(ble_evt_t * p_ble_evt)
 {
     //进入回调函数
-	  debug_log("\r\nGOTO ble_evt_dispatch....\r\n");
+	  //debug_log("\r\nGOTO ble_evt_dispatch....\r\n");
 	
 		conn_mngr_ble_evt_handler(p_ble_evt);
     client_ble_evt_handler(p_ble_evt);
@@ -228,17 +228,15 @@ static void power_manage(void)
  */
 int main(void)
 {
-    debug_init();//串口初始化
+    //debug_init();//串口初始化
+		USART_Configuration();//协议通信串口初始化
 	
 		led_init();  //初始化led
 		time1_init(); //初始化time；添加中断做测试。
 	
+		//APPL_LOG("XXXXXXXXXXXXXXXXXXXXXX\r\n");
+		//APPL_LOG("**********协议通信串口初始化完成********\r\n");
 	
-	  APPL_LOG("XXXXXXXXXXXXXXXXXXXXXX\r\n");
-	
-		
-	
-
     ble_stack_init();//蓝牙协议栈初始化
     client_init();//客户端初始化
     connection_manager_init();//连接初始化

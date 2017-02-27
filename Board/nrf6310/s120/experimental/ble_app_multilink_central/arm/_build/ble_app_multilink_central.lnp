@@ -6,6 +6,8 @@
 ".\_build\delay.o"
 ".\_build\led.o"
 ".\_build\time.o"
+".\_build\uart.o"
+".\_build\pro_slip.o"
 ".\_build\ble_srv_common.o"
 ".\_build\ble_debug_assert_handler.o"
 ".\_build\softdevice_handler.o"

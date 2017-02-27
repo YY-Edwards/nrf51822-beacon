@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * @defgroup debug_logger Debug Logger
+ * @defgroup //debug_logger Debug Logger
  * @ingroup experimental_api
  * @{
  * @brief Enables debug logs/ trace over UART.
@@ -30,7 +30,7 @@ void debug_init(void);
 #define debug_log printf
 #else // ENABLE_DEBUG_LOG_SUPPORT
 #define debug_init(...)
-#define debug_log(...)
+#define //debug_log(...)
 #endif // ENABLE_DEBUG_LOG_SUPPORT
 
 /** @} */

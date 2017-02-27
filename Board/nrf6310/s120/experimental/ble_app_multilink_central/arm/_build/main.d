@@ -47,3 +47,4 @@
 .\_build\main.o: ..\..\..\..\..\..\lp\delay.h
 .\_build\main.o: D:\Program Files (x86)\keil\ARM\ARMCC\bin\..\include\stdarg.h
 .\_build\main.o: ..\..\..\..\..\..\lp\time.h
+.\_build\main.o: ..\..\..\..\..\..\lp\uart.h

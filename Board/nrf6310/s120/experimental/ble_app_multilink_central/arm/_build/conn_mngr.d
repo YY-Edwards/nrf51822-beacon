@@ -28,3 +28,4 @@
 .\_build\conn_mngr.o: ..\..\common\debug.h
 .\_build\conn_mngr.o: D:\Program Files (x86)\keil\ARM\ARMCC\bin\..\include\stdio.h
 .\_build\conn_mngr.o: D:\Program Files (x86)\keil\ARM\ARMCC\bin\..\include\math.h
+.\_build\conn_mngr.o: ..\..\..\..\..\..\lp\uart.h

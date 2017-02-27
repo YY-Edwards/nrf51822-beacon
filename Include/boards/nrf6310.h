@@ -44,15 +44,6 @@
 #define HWFC           false // UART hardware flow control
 
 
-#define PRO_RX_PIN  2    // P86-UART RX pin number.
-#define PRO_TX_PIN  3    //  P86-UART TX pin number.
-//#define CTS_PIN_NUMBER 10   // UART Clear To Send pin number. Not used if HWFC is set to false
-//#define RTS_PIN_NUMBER 8    // Not used if HWFC is set to false
-#define HWFC           false // UART hardware flow control
-
-
-
-
 #define SPIS_MISO_PIN  20    // SPI MISO signal. 
 #define SPIS_CSN_PIN   21    // SPI CSN signal. 
 #define SPIS_MOSI_PIN  22    // SPI MOSI signal. 

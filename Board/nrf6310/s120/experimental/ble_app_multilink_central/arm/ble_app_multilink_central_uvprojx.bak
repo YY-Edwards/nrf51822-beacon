@@ -450,14 +450,14 @@
               <FilePath>..\..\..\..\..\..\lp\time.c</FilePath>
             </File>
             <File>
-              <FileName>exit.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\lp\exit.c</FilePath>
-            </File>
-            <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\..\lp\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>pro_slip.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\lp\protocol\pro_slip.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -947,14 +947,14 @@
               <FilePath>..\..\..\..\..\..\lp\time.c</FilePath>
             </File>
             <File>
-              <FileName>exit.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\..\lp\exit.c</FilePath>
-            </File>
-            <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\..\lp\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>pro_slip.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\..\..\lp\protocol\pro_slip.c</FilePath>
             </File>
           </Files>
         </Group>

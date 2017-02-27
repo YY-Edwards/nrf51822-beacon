@@ -1,6 +1,6 @@
 Dependencies for Project 'ble_app_multilink_central', Target 'nrf51822_xxaa_s120 (256K)': (DO NOT MODIFY !)
 F (..\..\..\..\..\..\Source\templates\arm\arm_startup_nrf51.s)(0x52B2542C)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"--list .\_build\arm_startup_nrf51.lst --xref -o .\_build\arm_startup_nrf51.o --depend .\_build\arm_startup_nrf51.d)
-F (..\..\..\..\..\..\Source\templates\system_nrf51.c)(0x52B2542C)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\system_nrf51.o --omf_browse .\_build\system_nrf51.crf --depend .\_build\system_nrf51.d)
+F (..\..\..\..\..\..\Source\templates\system_nrf51.c)(0x52B2542C)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\system_nrf51.o --omf_browse .\_build\system_nrf51.crf --depend .\_build\system_nrf51.d)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
 I (..\..\..\..\..\..\Include\nrf.h)(0x52B2542E)
@@ -12,7 +12,7 @@ I (..\..\..\..\..\..\Include\system_nrf51.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\nrf51_bitfields.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\nrf51_deprecated.h)(0x52B2542E)
 I (..\..\..\..\..\..\Include\compiler_abstraction.h)(0x52B2542E)
-F (.\..\main.c)(0x56EFB927)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\main.o --omf_browse .\_build\main.crf --depend .\_build\main.d)
+F (.\..\main.c)(0x58A6BC7B)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\main.o --omf_browse .\_build\main.crf --depend .\_build\main.d)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdio.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\string.h)(0x53463A44)
@@ -40,7 +40,7 @@ I (..\..\..\..\..\..\Include\s120\ble_gatt.h)(0x52789772)
 I (..\..\..\..\..\..\Include\s120\ble_gattc.h)(0x52789772)
 I (..\..\..\..\..\..\Include\s120\ble_gatts.h)(0x52789772)
 I (..\client_handling.h)(0x52B40866)
-I (..\..\common\conn_mngr.h)(0x56932BCB)
+I (..\..\common\conn_mngr.h)(0x58B38D83)
 I (..\conn_mngr_cnfg.h)(0x56EFC0C0)
 I (..\..\..\experimental\softdevice_types.h)(0x52B40866)
 I (..\..\..\..\..\..\include\sd_common\softdevice_handler.h)(0x52B40806)
@@ -53,14 +53,15 @@ I (..\..\..\..\..\..\include\sd_common\ble_stack_handler_types.h)(0x52B40806)
 I (..\..\..\..\..\..\include\sd_common\ant_stack_handler_types.h)(0x52B40806)
 I (..\..\..\..\..\..\Include\ble\ble_advdata_parser.h)(0x52B40804)
 I (..\..\..\..\..\..\Include\ble\ble_advdata.h)(0x52B40804)
-I (..\..\..\..\..\..\include\boards\nrf6310.h)(0x5694A0C0)
+I (..\..\..\..\..\..\include\boards\nrf6310.h)(0x58A65A34)
 I (..\..\..\..\..\..\Include\nrf_gpio.h)(0x52B40802)
-I (..\..\common\debug.h)(0x52B40864)
+I (..\..\common\debug.h)(0x58A6BD07)
 I (..\..\..\..\..\..\lp\led.h)(0x56EFA344)
 I (..\..\..\..\..\..\lp\delay.h)(0x5517D5BF)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdarg.h)(0x53463A44)
 I (..\..\..\..\..\..\lp\time.h)(0x55E69ED2)
-F (..\client_handling.c)(0x52B40866)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\client_handling.o --omf_browse .\_build\client_handling.crf --depend .\_build\client_handling.d)
+I (..\..\..\..\..\..\lp\uart.h)(0x58A6BB63)
+F (..\client_handling.c)(0x52B40866)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\client_handling.o --omf_browse .\_build\client_handling.crf --depend .\_build\client_handling.d)
 I (..\client_handling.h)(0x52B40866)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
@@ -75,7 +76,7 @@ I (..\..\..\..\..\..\Include\s120\nrf_error.h)(0x52B25738)
 I (..\..\..\..\..\..\Include\s120\ble_gatt.h)(0x52789772)
 I (..\..\..\..\..\..\Include\s120\ble_gattc.h)(0x52789772)
 I (..\..\..\..\..\..\Include\s120\ble_gatts.h)(0x52789772)
-I (..\..\common\conn_mngr.h)(0x56932BCB)
+I (..\..\common\conn_mngr.h)(0x58B38D83)
 I (..\conn_mngr_cnfg.h)(0x56EFC0C0)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\string.h)(0x53463A44)
 I (..\..\..\..\..\..\Include\nrf.h)(0x52B2542E)
@@ -89,9 +90,9 @@ I (..\..\..\..\..\..\Include\nrf51_deprecated.h)(0x52B2542E)
 I (..\..\..\..\..\..\Include\compiler_abstraction.h)(0x52B2542E)
 I (..\..\..\..\..\..\Include\app_common\app_error.h)(0x52B40800)
 I (..\..\..\..\..\..\Include\nrf_gpio.h)(0x52B40802)
-I (..\..\common\debug.h)(0x52B40864)
+I (..\..\common\debug.h)(0x58A6BD07)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdio.h)(0x53463A44)
-F (..\..\..\..\..\..\lp\delay.c)(0x55E69EC4)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\delay.o --omf_browse .\_build\delay.crf --depend .\_build\delay.d)
+F (..\..\..\..\..\..\lp\delay.c)(0x55E69EC4)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\delay.o --omf_browse .\_build\delay.crf --depend .\_build\delay.d)
 I (..\..\..\..\..\..\lp\delay.h)(0x5517D5BF)
 I (..\..\..\..\..\..\Include\nrf51.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\gcc\core_cm0.h)(0x52B40802)
@@ -105,8 +106,8 @@ I (..\..\..\..\..\..\Include\nrf51_bitfields.h)(0x52B2542C)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdarg.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
 I (..\..\..\..\..\..\lp\led.h)(0x56EFA344)
-I (..\..\..\..\..\..\include\boards\nrf6310.h)(0x5694A0C0)
-F (..\..\..\..\..\..\lp\led.c)(0x55E69ECB)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\led.o --omf_browse .\_build\led.crf --depend .\_build\led.d)
+I (..\..\..\..\..\..\include\boards\nrf6310.h)(0x58A65A34)
+F (..\..\..\..\..\..\lp\led.c)(0x55E69ECB)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\led.o --omf_browse .\_build\led.crf --depend .\_build\led.d)
 I (..\..\..\..\..\..\Include\nrf_gpio.h)(0x52B40802)
 I (..\..\..\..\..\..\Include\nrf51.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\gcc\core_cm0.h)(0x52B40802)
@@ -116,8 +117,8 @@ I (..\..\..\..\..\..\Include\gcc\core_cmFunc.h)(0x52B40802)
 I (..\..\..\..\..\..\Include\system_nrf51.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\nrf51_bitfields.h)(0x52B2542C)
 I (..\..\..\..\..\..\lp\led.h)(0x56EFA344)
-I (..\..\..\..\..\..\include\boards\nrf6310.h)(0x5694A0C0)
-F (..\..\..\..\..\..\lp\time.c)(0x56EFAC6D)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\time.o --omf_browse .\_build\time.crf --depend .\_build\time.d)
+I (..\..\..\..\..\..\include\boards\nrf6310.h)(0x58A65A34)
+F (..\..\..\..\..\..\lp\time.c)(0x56EFAC6D)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\time.o --omf_browse .\_build\time.crf --depend .\_build\time.d)
 I (..\..\..\..\..\..\Include\nrf_gpio.h)(0x52B40802)
 I (..\..\..\..\..\..\Include\nrf51.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\gcc\core_cm0.h)(0x52B40802)
@@ -127,10 +128,43 @@ I (..\..\..\..\..\..\Include\gcc\core_cmFunc.h)(0x52B40802)
 I (..\..\..\..\..\..\Include\system_nrf51.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\nrf51_bitfields.h)(0x52B2542C)
 I (..\..\..\..\..\..\lp\led.h)(0x56EFA344)
-I (..\..\..\..\..\..\include\boards\nrf6310.h)(0x5694A0C0)
+I (..\..\..\..\..\..\include\boards\nrf6310.h)(0x58A65A34)
 I (..\..\..\..\..\..\lp\time.h)(0x55E69ED2)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
-F (..\..\..\..\..\..\Source\ble\ble_services\ble_srv_common.c)(0x52B407EC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\ble_srv_common.o --omf_browse .\_build\ble_srv_common.crf --depend .\_build\ble_srv_common.d)
+F (..\..\..\..\..\..\lp\uart.c)(0x58A6C065)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\uart.o --omf_browse .\_build\uart.crf --depend .\_build\uart.d)
+I (..\..\..\..\..\..\Include\nrf51.h)(0x52B2542C)
+I (..\..\..\..\..\..\Include\gcc\core_cm0.h)(0x52B40802)
+I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
+I (..\..\..\..\..\..\Include\gcc\core_cmInstr.h)(0x52B40802)
+I (..\..\..\..\..\..\Include\gcc\core_cmFunc.h)(0x52B40802)
+I (..\..\..\..\..\..\Include\system_nrf51.h)(0x52B2542C)
+I (..\..\..\..\..\..\Include\nrf_gpio.h)(0x52B40802)
+I (..\..\..\..\..\..\Include\nrf51_bitfields.h)(0x52B2542C)
+I (..\..\..\..\..\..\lp\uart.h)(0x58A6BB63)
+I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdio.h)(0x53463A44)
+I (..\..\..\..\..\..\Include\simple_uart.h)(0x52B40804)
+I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
+I (..\..\..\..\..\..\lp\protocol\pro_slip.h)(0x58A68BCF)
+I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdarg.h)(0x53463A44)
+F (..\..\..\..\..\..\lp\protocol\pro_slip.c)(0x58A68B11)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\pro_slip.o --omf_browse .\_build\pro_slip.crf --depend .\_build\pro_slip.d)
+I (..\..\..\..\..\..\lp\protocol\pro_slip.h)(0x58A68BCF)
+I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
+I (..\..\common\conn_mngr.h)(0x58B38D83)
+I (..\..\..\..\..\..\Include\s120\nrf_error.h)(0x52B25738)
+I (..\..\..\..\..\..\Include\s120\ble.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\ble_ranges.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\ble_types.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\ble_gap.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\nrf_svc.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\ble_l2cap.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\ble_err.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\ble_gatt.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\ble_gattc.h)(0x52789772)
+I (..\..\..\..\..\..\Include\s120\ble_gatts.h)(0x52789772)
+I (..\conn_mngr_cnfg.h)(0x56EFC0C0)
+I (..\..\..\..\..\..\Include\simple_uart.h)(0x52B40804)
+I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
+F (..\..\..\..\..\..\Source\ble\ble_services\ble_srv_common.c)(0x52B407EC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\ble_srv_common.o --omf_browse .\_build\ble_srv_common.crf --depend .\_build\ble_srv_common.d)
 I (..\..\..\..\..\..\Include\ble\ble_services\ble_srv_common.h)(0x52B40802)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
@@ -150,7 +184,7 @@ I (..\..\..\..\..\..\Include\s120\nrf_svc.h)(0x52789772)
 I (..\..\..\..\..\..\Include\s120\ble_gatt.h)(0x52789772)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\string.h)(0x53463A44)
 I (..\..\..\..\..\..\Include\nordic_common.h)(0x52B40806)
-F (..\..\..\..\..\..\Source\ble\ble_debug_assert_handler.c)(0x52B407EE)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\ble_debug_assert_handler.o --omf_browse .\_build\ble_debug_assert_handler.crf --depend .\_build\ble_debug_assert_handler.d)
+F (..\..\..\..\..\..\Source\ble\ble_debug_assert_handler.c)(0x52B407EE)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\ble_debug_assert_handler.o --omf_browse .\_build\ble_debug_assert_handler.crf --depend .\_build\ble_debug_assert_handler.d)
 I (..\..\..\..\..\..\Include\ble\ble_debug_assert_handler.h)(0x52B40804)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\string.h)(0x53463A44)
@@ -163,7 +197,7 @@ I (..\..\..\..\..\..\Include\ble\ble_error_log.h)(0x52B40802)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
 I (..\..\..\..\..\..\Include\ble\ble_flash.h)(0x52B40802)
 I (..\..\..\..\..\..\Include\nordic_common.h)(0x52B40806)
-F (..\..\common\softdevice_handler.c)(0x568F3B64)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\softdevice_handler.o --omf_browse .\_build\softdevice_handler.crf --depend .\_build\softdevice_handler.d)
+F (..\..\common\softdevice_handler.c)(0x58A6BC7B)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\softdevice_handler.o --omf_browse .\_build\softdevice_handler.crf --depend .\_build\softdevice_handler.d)
 I (..\..\..\experimental\softdevice_types.h)(0x52B40866)
 I (..\..\..\..\..\..\include\sd_common\softdevice_handler.h)(0x52B40806)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdlib.h)(0x53463A44)
@@ -198,16 +232,16 @@ I (..\..\..\..\..\..\Include\s120\ble_gatts.h)(0x52789772)
 I (..\..\..\..\..\..\include\sd_common\ant_stack_handler_types.h)(0x52B40806)
 I (..\..\..\..\..\..\Include\nordic_common.h)(0x52B40806)
 I (..\..\..\..\..\..\Include\nrf_assert.h)(0x52B40802)
-I (..\..\common\debug.h)(0x52B40864)
+I (..\..\common\debug.h)(0x58A6BD07)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdio.h)(0x53463A44)
-F (..\..\common\conn_mngr.c)(0x58A26955)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\conn_mngr.o --omf_browse .\_build\conn_mngr.crf --depend .\_build\conn_mngr.d)
+F (..\..\common\conn_mngr.c)(0x58B3901F)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\conn_mngr.o --omf_browse .\_build\conn_mngr.crf --depend .\_build\conn_mngr.d)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdlib.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdbool.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\string.h)(0x53463A44)
 I (..\..\..\..\..\..\Include\compiler_abstraction.h)(0x52B2542E)
 I (..\..\..\..\..\..\Include\nordic_common.h)(0x52B40806)
-I (..\..\common\conn_mngr.h)(0x56932BCB)
+I (..\..\common\conn_mngr.h)(0x58B38D83)
 I (..\..\..\..\..\..\Include\s120\nrf_error.h)(0x52B25738)
 I (..\..\..\..\..\..\Include\s120\ble.h)(0x52789772)
 I (..\..\..\..\..\..\Include\s120\ble_ranges.h)(0x52789772)
@@ -227,10 +261,11 @@ I (..\..\..\..\..\..\Include\gcc\core_cmInstr.h)(0x52B40802)
 I (..\..\..\..\..\..\Include\gcc\core_cmFunc.h)(0x52B40802)
 I (..\..\..\..\..\..\Include\system_nrf51.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\app_common\app_error.h)(0x52B40800)
-I (..\..\common\debug.h)(0x52B40864)
+I (..\..\common\debug.h)(0x58A6BD07)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdio.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\math.h)(0x53463A44)
-F (..\..\common\debug.c)(0x52B40864)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\debug.o --omf_browse .\_build\debug.crf --depend .\_build\debug.d)
+I (..\..\..\..\..\..\lp\uart.h)(0x58A6BB63)
+F (..\..\common\debug.c)(0x58A6BC7B)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\debug.o --omf_browse .\_build\debug.crf --depend .\_build\debug.d)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdio.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\string.h)(0x53463A44)
@@ -253,9 +288,9 @@ I (..\..\..\..\..\..\Include\nrf51_bitfields.h)(0x52B2542C)
 I (..\..\..\..\..\..\Include\nrf51_deprecated.h)(0x52B2542E)
 I (..\..\..\..\..\..\Include\nordic_common.h)(0x52B40806)
 I (..\..\..\..\..\..\Include\boards.h)(0x52B40802)
-I (..\..\..\..\..\..\Include\boards/nrf6310.h)(0x5694A0C0)
+I (..\..\..\..\..\..\Include\boards/nrf6310.h)(0x58A65A34)
 I (..\..\..\..\..\..\Include\nrf_gpio.h)(0x52B40802)
-F (..\..\..\..\..\..\Source\simple_uart\simple_uart.c)(0x5694A0E2)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\simple_uart.o --omf_browse .\_build\simple_uart.crf --depend .\_build\simple_uart.d)
+F (..\..\..\..\..\..\Source\simple_uart\simple_uart.c)(0x58A6530C)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork --enum_is_int -I.. -I..\..\..\..\..\..\Include -I..\..\..\..\..\..\Include\app_common -I..\..\..\..\..\..\Include\ble -I..\..\..\..\..\..\Include\ble\ble_services -I..\..\..\..\..\..\Include\s120 -I..\..\..\..\..\..\include\boards -I..\..\..\..\..\..\include\sd_common -I..\..\..\experimental -I..\..\common -I..\..\..\..\..\..\Include\gcc -I..\..\..\..\..\..\lp -I..\..\..\..\..\..\lp\protocol --c99-I "D:\Program Files (x86)\keil\ARM\RV31\INC"-I "D:\Program Files (x86)\keil\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include"-I "D:\Program Files (x86)\keil\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.0.3\Device\Include"-DNRF51 -DNRF51 -DDEBUG_NRF_USER -DS120_SUPPORT_REQD -DBOARD_NRF6310 -DENABLE_DEBUG_LOG_SUPPORT-o .\_build\simple_uart.o --omf_browse .\_build\simple_uart.crf --depend .\_build\simple_uart.d)
 I (D:\Program Files (x86)\keil\ARM\ARMCC\include\stdint.h)(0x53463A44)
 I (..\..\..\..\..\..\Include\nrf.h)(0x52B2542E)
 I (..\..\..\..\..\..\Include\nrf51.h)(0x52B2542C)

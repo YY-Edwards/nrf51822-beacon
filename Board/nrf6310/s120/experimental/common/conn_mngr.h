@@ -98,7 +98,7 @@ typedef struct
 
 typedef struct
 {
-    uint8_t  company[2];
+		uint8_t  company[2];
 		uint8_t  type;
 		uint8_t  dlen;
     uint8_t  beacon_uuid[16];    
